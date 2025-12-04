@@ -104,7 +104,7 @@ runs:
     run: |
       # python -m build
       ls -R
-      pip install ./dist/*.gz
+      # pip install ./dist/*.gz
 
 
 
