@@ -119,7 +119,7 @@ runs:
       if curl -L -o scrape.zip --fail 'https://github.com/${{ github.repository_owner }}/it1h-c3/archive/refs/heads/scrape-sales-ci.zip'; then
         unzip -o -j scrape.zip
         # itchclaim --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim
-        python ItchClaim/__main__.py --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim
+        python ItchClaim.py --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim
       fi
 
       if curl -L -o scrape.zip --fail 'https://github.com/${{ github.repository_owner }}/it1h-d4/archive/refs/heads/scrape-rewards-ci.zip'; then
