@@ -103,8 +103,9 @@ runs:
     shell: bash
     run: |
       # python -m build
-      ls -R
+      # ls -R
       # pip install ./dist/*.gz
+      pip install -r requirements.txt
 
 
 
