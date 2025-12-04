@@ -103,7 +103,7 @@ runs:
       git submodule update
 
       pip install -r requirements.txt
-      pip install -r ItchClaim/FlareSolverr/requirements.txt
+      pip install -r ItchClaim/flaresolverr/requirements.txt
 
 
 
