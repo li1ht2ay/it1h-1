@@ -52,9 +52,6 @@ runs:
   
   - shell: bash
     run: |
-      git submodule init
-      git submodule update
-
       python -m pip install --upgrade pip
       pip install build twine
 
@@ -102,10 +99,11 @@ runs:
       CXX: ccache g++
     shell: bash
     run: |
-      # python -m build
-      # ls -R
-      # pip install ./dist/*.gz
+      git submodule init
+      git submodule update
+
       pip install -r requirements.txt
+      pip install -r ItchClaim/FlareSolverr/requirements.txt
 
 
 
