@@ -116,22 +116,22 @@ runs:
     run: |
       if curl -L -o scrape.zip --fail 'https://github.com/${{ github.repository_owner }}/it1h-c3/archive/refs/heads/scrape-sales-ci.zip'; then
         unzip -o -j scrape.zip
-        python itchclaim.py --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim2
+        python itchclaim.py --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim
       fi
 
       if curl -L -o scrape.zip --fail 'https://github.com/${{ github.repository_owner }}/it1h-d4/archive/refs/heads/scrape-rewards-ci.zip'; then
         unzip -o -j scrape.zip
-        python itchclaim.py --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim2
+        python itchclaim.py --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim
       fi
 
       if curl -L -o scrape.zip --fail 'https://github.com/${{ github.repository_owner }}/it1h-b2/archive/refs/heads/scrape-sales-ci.zip'; then
         unzip -o -j scrape.zip
-        python itchclaim.py --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim2
+        python itchclaim.py --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim
       fi
 
       if curl -L -o scrape.zip --fail 'https://github.com/${{ github.repository_owner }}/it1h-a2/archive/refs/heads/scrape-rewards-ci.zip'; then
         unzip -o -j scrape.zip
-        python itchclaim.py --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim2
+        python itchclaim.py --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim
       fi
 
       mv *.txt ../
