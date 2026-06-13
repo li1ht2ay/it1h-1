@@ -129,7 +129,7 @@ runs:
         python itchclaim.py --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim
       fi
 
-      if curl -L -o scrape.zip --fail 'https://github.com/${{ github.repository_owner }}/it1h-a1/archive/refs/heads/scrape-rewards-ci.zip'; then
+      if curl -L -o scrape.zip --fail 'https://github.com/${{ github.repository_owner }}/it1h-a2/archive/refs/heads/scrape-rewards-ci.zip'; then
         unzip -o -j scrape.zip
         python itchclaim.py --login ${{ inputs.name }} --password ${{ inputs.password }} --totp ${{ inputs.totp }} claim
       fi
